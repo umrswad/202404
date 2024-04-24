@@ -1,5 +1,4 @@
 <script setup>
-import GoodsItem from "@/components/GoodsItem.vue";
 import { useBanner } from "./composables/useBanner";
 import { useCategory } from "./composables/useCategory";
 const { bannerList } = useBanner();
@@ -43,7 +42,11 @@ const { categoryData } = useCategory();
           <h3>- {{ item.name }}-</h3>
         </div>
         <div class="body">
-          <GoodsItem v-for="good in item.goods" :goods="good" :key="good.id" />
+          <XtxGoodsItem
+            v-for="good in item.goods"
+            :goods="good"
+            :key="good.id"
+          />
         </div>
       </div>
     </div>

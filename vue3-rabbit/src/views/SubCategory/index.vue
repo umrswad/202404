@@ -1,6 +1,5 @@
 <script setup>
 import { getCategoryFilterAPI, getSubCategoryAPI } from "@/apis/category";
-import GoodsItem from "@/components/GoodsItem.vue";
 import { onMounted, ref } from "vue";
 import { useRoute } from "vue-router";
 // 获取面包屑导航数据
@@ -71,7 +70,7 @@ const load = async () => {
         :infinite-scroll-disabled="disabled"
       >
         <!-- 商品列表-->
-        <GoodsItem v-for="item in goodList" :goods="item" :key="item.id" />
+        <XtxGoodsItem v-for="item in goodList" :goods="item" :key="item.id" />
       </div>
     </div>
   </div>
